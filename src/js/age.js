@@ -13,6 +13,11 @@ export class Human {
     this.venusExpectancy = 0;
     this.marsExpectancy = 0;
     this.jupiterExpectancy = 0;
+    this.earthLifeLeft = 0;
+    this.mercuryLifeLeft = 0;
+    this.venusLifeLeft = 0;
+    this.marsLifeLeft = 0;
+    this.jupiterLifeLeft = 0;
   }
   earthExpectancy() {
     if (this.birthGender === "female" && this.age < 65) {
@@ -39,32 +44,9 @@ export class Human {
     this.marsExpectancy = Math.round(this.earthAvgLife/1.88);
     this.jupiterExpectancy = Math.round(this.earthAvgLife/11.86);
   }
-  
+  lifeLeft() {
 
-  // mercuryExpectancy() {
-  //   if (this.birthGender === "female" && this.age < 65) {
-  //     const mercAvgLife = this.earthAvgLife * 4.32;
-  //     //these need to be fixed to 4.16 (it's 2021 not 2020)
-  //     return parseInt(mercAvgLife);
-  //   } else if (this.birthGender === "female" && this.age > 65) {
-  //     const mercAvgLife = this.earthAvgLife * 4.32;
-  //     return parseInt(mercAvgLife);
-  //   } else if (this.birthGender === "male" && this.age > 65) {
-  //     const mercAvgLife = this.earthAvgLife * 4.32;
-  //     return parseInt(mercAvgLife);
-  //   } else {
-  //     const mercAvgLife = this.earthAvgLife * 4.32;
-  //     return parseInt(mercAvgLife);
-  //   }
-  // }
-  // venusExpectancy() {
-  //   const venusAvgLife = this.earthAvgLife * 1.628;
-  //   return parseInt(venusAvgLife);
-  // }
-  // marsExpectancy() {
-  //   const marsAvgLife = this.earthAvgLife * .532;
-  //   return parseInt(marsAvgLife);
-  // }
+  }
 }
 
 //a quick note on gender. Since I am unable to find life expectancy calculators that do not include genders past male and female I decided to make my gender "birth gender" for the sake of purposes to attempt to be more inclusive. If I could do a calculation that allowed for more options I would do so.

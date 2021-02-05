@@ -69,9 +69,10 @@ describe('Interstellar Life Left', () => {
     const human = new Human(25, "female");
     human.earthExpectancy();
     human.insterstellarAge();
-    expect().toEqual();
-    expect().toEqual();
-    expect().toEqual();
-    expect().toEqual();
+    expect(human.earthLifeLeft).toEqual(57);
+    expect(human.mercuryLifeLeft).toEqual(238);
+    expect(human.venusLifeLeft).toEqual(92);
+    expect(human.marsLifeLeft).toEqual(30);
+    expect(human.jupiterLifeLeft).toEqual(5);
   })
 })
