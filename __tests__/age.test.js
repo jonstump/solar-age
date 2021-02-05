@@ -65,6 +65,6 @@ describe('Life expectancy on Mars', () => {
   test('should correctly output life expectancy on Mars', () => {
     const human = new Human (25, "female");
     human.earthExpectancy();
-    expect(human.marsExpectancy()).toEqual(13)
+    expect(human.marsExpectancy()).toEqual(43)
   })
 })

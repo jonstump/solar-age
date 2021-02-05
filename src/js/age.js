@@ -40,7 +40,8 @@ export class Human {
     return parseInt(venusAvgLife);
   }
   marsExpectancy() {
-    
+    const marsAvgLife = this.earthAvgLife * .532;
+    return parseInt(marsAvgLife);
   }
 }
 
