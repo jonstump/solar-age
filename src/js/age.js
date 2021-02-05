@@ -18,6 +18,10 @@ export class Human {
       return avgLife;
     }
   }
+  mercuryExpectancy() {
+    const mercAvgLife = this.age * 4.32
+    return mercAvgLife; 
+  }
 }
 
 //a quick note on gender. Since I am unable to find life expectancy calculators that do not include genders past male and female I decided to make my gender "birth gender" for the sake of purposes to attempt to be more inclusive. If I could do a calculation that allowed for more options I would do so.
