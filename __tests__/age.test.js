@@ -88,8 +88,8 @@ describe('Interstellar Life Left', () => {
     human.insterstellarAge();
     human.lifeLeft();
     expect(human.earthLifeLeft).toEqual(14);
-    expect(human.mercuryLifeLeft).toEqual(58);
-    expect(human.venusLifeLeft).toEqual(23);
+    expect(human.mercuryLifeLeft).toEqual(59);
+    expect(human.venusLifeLeft).toEqual(22);
     expect(human.marsLifeLeft).toEqual(7);
     expect(human.jupiterLifeLeft).toEqual(1);
   })

@@ -46,8 +46,13 @@ export class Human {
   }
   lifeLeft() {
     const negLifeCheck = (this.earthAvgLife+65)-this.age
+    const newExp = (this.earthAvgLife+65)
       if (negLifeCheck < 0) {
-        
+        this.earthLifeLeft = this.age - newExp
+        this.mercuryLifeLeft = this.mercuryAge - Math.round(newExp / .24)
+        this.venusLifeLeft = this.venusAge - Math.round(newExp / .62)
+        this.marsLifeLeft = this.marsAge - Math.round(newExp / 1.88)
+        this.jupiterLifeLeft = this.jupiterAge - Math.round(newExp / 11.86)
         return true;
       } else {
         this.earthLifeLeft = Math.round(this.earthAvgLife-this.age)
