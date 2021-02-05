@@ -20,7 +20,6 @@ export class Human {
     }
   }
   mercuryExpectancy() {
-    this.earthExpectancy();
     if (this.birthGender === "female" && this.age < 65) {
       const mercAvgLife = this.earthAvgLife * 4.32;
       return parseInt(mercAvgLife);
