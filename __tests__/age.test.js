@@ -15,4 +15,8 @@ describe('Life Expectancy per Planet', () => {
     const human = new Human (25, "female");
     expect(human.earthExpectancy()).toEqual(82);
   })
+  test('should correctly calculate male life expectancy on Earth for age under 65', () => {
+    const human = new Human (25, "male");
+    expect(human.earthExpectancy()).toEqual(76);
+  })
 })
