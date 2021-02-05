@@ -54,13 +54,17 @@ describe('Life expectancy on Mercury', () => {
 })
 
 describe('Life expectancy on Venus', () => {
-  test('should correctly output female life expectancy on Venus for age under 65', () => {
+  test('should correctly output life expectancy on Venus', () => {
     const human = new Human (25, "female");
     human.earthExpectancy();
     expect(human.venusExpectancy()).toEqual(133)
   })
-  // test('should correctly output male life expectancy on Venus for age under 65', () => {
-  //   const human = new Human (25, "male");
-  //   expect(human.venusExpectancy()).toEqual()
-  // })
+})
+
+describe('Life expectancy on Mars', () => {
+  test('should correctly output life expectancy on Mars', () => {
+    const human = new Human (25, "female");
+    human.earthExpectancy();
+    expect(human.marsExpectancy()).toEqual(13)
+  })
 })
