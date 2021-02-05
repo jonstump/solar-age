@@ -9,7 +9,7 @@ describe('Human', () => {
   })
 })
 
-describe('Life Expectancy per Planet', () => {
+describe('Life Expectancy on Earth', () => {
 
   test('should correctly calculate female life expectancy on Earth for age under 65', () => {
     const human = new Human (25, "female");

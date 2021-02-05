@@ -4,8 +4,11 @@ export class Human {
     this.birthGender = birthGender;
   }
   earthExpectancy() {
-    if (this.birthGender === "female") {
+    if (this.birthGender === "female" && this.age < 65) {
       const avgLife = 82;
+      return avgLife;
+    } else if (this.birthGender === "female" && this.age > 65) {
+      const avgLife = 21;
       return avgLife;
     } else {
       const avgLife = 76;
