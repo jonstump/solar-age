@@ -2,6 +2,7 @@ export class Human {
   constructor (age, birthGender) {
     this.age = age;
     this.birthGender = birthGender;
+    this.earthAvgLife = 0
   }
   earthExpectancy() {
     if (this.birthGender === "female" && this.age < 65) {
@@ -25,6 +26,10 @@ export class Human {
       return parseInt(mercAvgLife);
     } else if (this.birthGender === "female" && this.age > 65) {
       const avgLife = 21;
+      const mercAvgLife = avgLife * 4.32;
+      return parseInt(mercAvgLife);
+    } else if (this.birthGender === "male" && this.age > 65) {
+      const avgLife = 18;
       const mercAvgLife = avgLife * 4.32;
       return parseInt(mercAvgLife);
     } else {

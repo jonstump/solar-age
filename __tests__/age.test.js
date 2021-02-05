@@ -6,6 +6,7 @@ describe('Human', () => {
     const human = new Human (25, "female");
     expect(human.age).toEqual(25);
     expect(human.birthGender).toEqual("female");
+    expect(human.earthAvgLife).toEqual(0)
   })
 })
 
