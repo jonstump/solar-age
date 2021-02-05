@@ -6,17 +6,17 @@ export class Human {
   }
   earthExpectancy() {
     if (this.birthGender === "female" && this.age < 65) {
-      const avgLife = 82;
-      return avgLife;
+      this.earthAvgLife = 82;
+      return this.earthAvgLife;
     } else if (this.birthGender === "female" && this.age > 65) {
-      const avgLife = 21;
-      return avgLife;
+      this.earthAvgLife = 21;
+      return this.earthAvgLife;
     } else if (this.birthGender === "male" && this.age > 65) {
-      const avgLife = 18;
-      return avgLife;
+      this.earthAvgLife = 18;
+      return this.earthAvgLife;
     } else {
-      const avgLife = 76;
-      return avgLife;
+      this.earthAvgLife = 76;
+      return this.earthAvgLife;
     }
   }
   mercuryExpectancy() {
