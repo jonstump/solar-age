@@ -45,14 +45,21 @@ export class Human {
     this.jupiterExpectancy = Math.round(this.earthAvgLife/11.86);
   }
   lifeLeft() {
-    this.earthLifeLeft = this.earthAvgLife-this.age
-    if (this.earthLifeLeft < 0) {
-      return true;
-    }
-    this.mercuryLifeLeft = Math.round(this.mercuryExpectancy-this.mercuryAge)
-    this.venusLifeLeft = Math.round(this.venusExpectancy-this.venusAge)
-    this.marsLifeLeft = Math.round(this.marsExpectancy-this.marsAge)
-    this.jupiterLifeLeft = Math.round(this.jupiterExpectancy-this.jupiterAge)
+    const negLifeCheck = this.earthAvgLife-this.age
+      if (negLifeCheck < 0) {
+        this.mercuryLifeLeft = Math.round(this.mercuryAge-this.mercuryExpectancy)
+        this.venusLifeLeft = Math.round(this.venusAge-this.venusExpectancy)
+        this.marsLifeLeft = Math.round(this.marsAge-this.marsExpectancy)
+        this.jupiterLifeLeft = Math.round(this.jupiterAge-this.jupiterExpectancy)
+        return true;
+      } else {
+        this.earthLifeLeft = Math.round(this.earthAvgLife-this.age)
+        this.mercuryLifeLeft = Math.round(this.mercuryExpectancy-this.mercuryAge)
+        this.venusLifeLeft = Math.round(this.venusExpectancy-this.venusAge)
+        this.marsLifeLeft = Math.round(this.marsExpectancy-this.marsAge)
+        this.jupiterLifeLeft = Math.round(this.jupiterExpectancy-this.jupiterAge)
+      }
+    
   }
 }
 
