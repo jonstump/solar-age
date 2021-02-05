@@ -82,4 +82,15 @@ describe('Interstellar Life Left', () => {
     human.insterstellarAge();
     expect(human.lifeLeft()).toEqual(true);
   })
+  test ('should calculate how much someone has lived past their life expectancy', () => {
+    const human = new Human(100, "female");
+    human.earthExpectancy();
+    human.insterstellarAge();
+    human.lifeLeft();
+    expect(human.earthLifeLeft).toEqual(18);
+    expect(human.mercuryLifeLeft).toEqual(75);
+    expect(human.venusLifeLeft).toEqual(29);
+    expect(human.marsLifeLeft).toEqual(10);
+    expect(human.jupiterLifeLeft).toEqual(2);
+  })
 })
