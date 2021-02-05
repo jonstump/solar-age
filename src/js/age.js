@@ -45,7 +45,14 @@ export class Human {
     this.jupiterExpectancy = Math.round(this.earthAvgLife/11.86);
   }
   lifeLeft() {
-
+    this.earthLifeLeft = this.earthAvgLife-this.age
+    if (this.earthLifeLeft < 0) {
+      return true;
+    }
+    this.mercuryLifeLeft = Math.round(this.mercuryExpectancy-this.mercuryAge)
+    this.venusLifeLeft = Math.round(this.venusExpectancy-this.venusAge)
+    this.marsLifeLeft = Math.round(this.marsExpectancy-this.marsAge)
+    this.jupiterLifeLeft = Math.round(this.jupiterExpectancy-this.jupiterAge)
   }
 }
 
