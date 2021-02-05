@@ -7,6 +7,9 @@ export class Human {
     if (this.birthGender === "female") {
       const avgLife = 82;
       return avgLife;
+    } else {
+      const avgLife = 76;
+      return avgLife;
     }
   }
 }
