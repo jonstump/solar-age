@@ -42,4 +42,8 @@ describe('Life expectancy on Mercury', () => {
     const human = new Human (75, "female");
     expect(human.mercuryExpectancy()).toEqual(90);
   })
+  test('should correctly output male life expectancy on Mercury for age over 65', () => {
+    const human = new Human (75, "male");
+    expect(human.mercuryExpectancy()).toEqual(77);
+  })
 })
