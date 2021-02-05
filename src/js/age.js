@@ -19,7 +19,7 @@ export class Human {
     }
   }
   mercuryExpectancy() {
-    const mercAvgLife = this.age * 4.32
+    const mercAvgLife = 82 * 4.32
     return mercAvgLife; 
   }
 }
