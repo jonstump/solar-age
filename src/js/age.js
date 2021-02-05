@@ -14,6 +14,7 @@ export class Human {
   }
   insterstellarAge() {
     this.mercuryAge = Math.round(this.age/.24);
+    this.venusAge = Math.round(this.age/.62);
   }
   earthExpectancy() {
     if (this.birthGender === "female" && this.age < 65) {
