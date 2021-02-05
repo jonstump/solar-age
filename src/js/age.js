@@ -19,8 +19,13 @@ export class Human {
     }
   }
   mercuryExpectancy() {
-    const mercAvgLife = 82 * 4.32
-    return mercAvgLife; 
+    if (this.birthGender === "female" && this.age < 65) {
+      const mercAvgLife = 82 * 4.32
+      return parseInt(mercAvgLife);
+    } else {
+      const mercAvgLife = 76 * 4.32
+      return parseInt(mercAvgLife);
+    }
   }
 }
 
