@@ -1,3 +1,5 @@
+// import { describe } from 'yargs'; I don't know but this line here keeps adding itself randomly while I worked on my project.
+
 import { Human } from '../src/js/age.js';
 
 describe('Human', () => {
@@ -15,6 +17,11 @@ describe('Human', () => {
     expect(human.venusExpectancy).toEqual(0);
     expect(human.marsExpectancy).toEqual(0);
     expect(human.jupiterExpectancy).toEqual(0);
+    expect(human.earthLifeLeft).toEqual(0);
+    expect(human.mercuryLifeLeft).toEqual(0);
+    expect(human.venusLifeLeft).toEqual(0);
+    expect(human.marsLifeLeft).toEqual(0);
+    expect(human.jupiterLifeLeft).toEqual(0);
   })
 })
 
@@ -55,45 +62,16 @@ describe('Interstellar Age Calculator', () => {
     expect(human.marsExpectancy).toEqual(44);
     expect(human.jupiterExpectancy).toEqual(7);
   })
+});
+
+describe('Interstellar Life Left', () => {
+  test('should calculate how much life a person has left per planet', () => {
+    const human = new Human(25, "female");
+    human.earthExpectancy();
+    human.insterstellarAge();
+    expect().toEqual();
+    expect().toEqual();
+    expect().toEqual();
+    expect().toEqual();
+  })
 })
-
-
-
-// describe('Life expectancy on Mercury', () => {
-//   test ('should correctly output female life expectancy on Mercury for age under 65', () => {
-//     const human = new Human (25, "female");
-//     human.earthExpectancy();
-//     expect(human.mercuryExpectancy()).toEqual(354);
-//   })
-//   test('should correctly output male life expectancy on Mercury for age under 65', () => {
-//     const human = new Human (25, "male");
-//     human.earthExpectancy();
-//     expect(human.mercuryExpectancy()).toEqual(328);
-//   })
-//   test('should correctly output female life expectancy on Mercury for age over 65', () => {
-//     const human = new Human (75, "female");
-//     human.earthExpectancy();
-//     expect(human.mercuryExpectancy()).toEqual(90);
-//   })
-//   test('should correctly output male life expectancy on Mercury for age over 65', () => {
-//     const human = new Human (75, "male");
-//     human.earthExpectancy();
-//     expect(human.mercuryExpectancy()).toEqual(77);
-//   })
-// })
-
-// describe('Life expectancy on Venus', () => {
-//   test('should correctly output life expectancy on Venus', () => {
-//     const human = new Human (25, "female");
-//     human.earthExpectancy();
-//     expect(human.venusExpectancy()).toEqual(133)
-//   })
-// })
-
-// describe('Life expectancy on Mars', () => {
-//   test('should correctly output life expectancy on Mars', () => {
-//     const human = new Human (25, "female");
-//     human.earthExpectancy();
-//     expect(human.marsExpectancy()).toEqual(43)
-//   })
-// })
