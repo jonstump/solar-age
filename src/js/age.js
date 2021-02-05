@@ -22,6 +22,7 @@ export class Human {
   mercuryExpectancy() {
     if (this.birthGender === "female" && this.age < 65) {
       const mercAvgLife = this.earthAvgLife * 4.32;
+      //these need to be fixed to 4.16 (it's 2021 not 2020)
       return parseInt(mercAvgLife);
     } else if (this.birthGender === "female" && this.age > 65) {
       const mercAvgLife = this.earthAvgLife * 4.32;
@@ -33,6 +34,9 @@ export class Human {
       const mercAvgLife = this.earthAvgLife * 4.32;
       return parseInt(mercAvgLife);
     }
+  }
+  venusExpectancy() {
+    
   }
 }
 
