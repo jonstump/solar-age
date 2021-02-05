@@ -20,6 +20,11 @@ describe('Interstellar Age Calculator', () => {
     human.insterstellarAge();
     expect(human.mercuryAge).toEqual(104);
   })
+  test('should calculate age for Venus', () => {
+    const human = new Human (25, "female");
+    human.insterstellarAge();
+    expect(human.venusAge).toEqual(40);
+  })
 })
 
 describe('Life Expectancy on Earth', () => {
