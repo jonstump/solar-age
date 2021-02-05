@@ -1,5 +1,7 @@
 //Note to instructor: I started my project in a different order at the beginning of the day and realized I needed to pivot back to some simpler code. This might look a little wonky in my git commit history as it made me realize I needed to update my constructor in order to significantly dry up my code. Just wanted to leave this note here in case there was some confusing looking through my git history.
 
+import { thisExpression } from "@babel/types";
+
 export class Human {
   constructor (age, birthGender) {
     this.age = age;
@@ -9,6 +11,9 @@ export class Human {
     this.venusAge = 0;
     this.marsAge = 0;
     this.jupiterAge = 0;
+  }
+  insterstellarAge() {
+    this.mercuryAge = Math.round(this.age/.24);
   }
   earthExpectancy() {
     if (this.birthGender === "female" && this.age < 65) {

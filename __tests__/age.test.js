@@ -17,6 +17,7 @@ describe('Human', () => {
 describe('Interstellar Age Calculator', () => {
   test('should calculate age for Mercury', () => {
     const human = new Human (25, "female");
+    human.insterstellarAge();
     expect(human.mercuryAge).toEqual(104);
   })
 })
