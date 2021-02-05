@@ -10,6 +10,9 @@ export class Human {
     } else if (this.birthGender === "female" && this.age > 65) {
       const avgLife = 21;
       return avgLife;
+    } else if (this.birthGender === "male" && this.age > 65) {
+      const avgLife = 18;
+      return avgLife;
     } else {
       const avgLife = 76;
       return avgLife;
