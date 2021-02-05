@@ -36,7 +36,8 @@ export class Human {
     }
   }
   venusExpectancy() {
-    
+    const venusAvgLife = this.earthAvgLife * 1.628;
+    return parseInt(venusAvgLife);
   }
 }
 
