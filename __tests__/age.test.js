@@ -52,26 +52,6 @@ describe('Life Expectancy on Earth', () => {
   })
 })
 
-// describe('Interstellar Age Calculator', () => {
-//   test('should calculate age for Mercury, Venus, Mars, and Jupiter', () => {
-//     const human = new Human (25, "female");
-//     human.insterstellarAge();
-//     expect(human.mercuryAge).toEqual(104);
-//     expect(human.venusAge).toEqual(40);
-//     expect(human.marsAge).toEqual(13);
-//     expect(human.jupiterAge).toEqual(2);
-//   })
-//   test('should calculate life expectancies for Mercury, Venus, Mars, and Jupiter based on Earth expectancy', () => {
-//     const human = new Human (25, "female");
-//     human.earthExpectancy();
-//     human.insterstellarAge();
-//     expect(human.mercuryExpectancy).toEqual(342);
-//     expect(human.venusExpectancy).toEqual(132);
-//     expect(human.marsExpectancy).toEqual(44);
-//     expect(human.jupiterExpectancy).toEqual(7);
-//   })
-// });
-
 describe('Interstellar Life Left', () => {
   test('should calculate how much life a person has left per planet', () => {
     const human = new Human(25, "female");
