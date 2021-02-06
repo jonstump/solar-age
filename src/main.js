@@ -11,9 +11,13 @@ $(document).ready(function() {
     const birthGender = $('#birthGender').val();
 
     const human = new Human(age, birthGender);
-    const earthAvgLife = human.earthExpectancy();
-    const insterstellarAge = human.insterstellarAge();
-    const lifeLeft = human.lifeLeft();
-    $('#response').append("<p>" + response + "</p>");
+    human.earthExpectancy();
+    human.lifeLeft();
+    $('#results').slideDown();
+    $("#earth-age").text(human.age);
+    $("#mercury-age").text(human.mercuryAge);
+    $("#venus-age").text(human.venusAge);
+    $("#mars-age").text(human.marsAge);
+    $("#jupiter-age").text(human.jupiterAge);
   });
 });
