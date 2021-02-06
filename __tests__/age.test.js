@@ -1,6 +1,6 @@
 // import { describe } from 'yargs'; I don't know but this line here keeps adding itself randomly while I worked on my project.
 
-import { Human } from '../src/js/age.js';
+import { Human } from '../src/age.js';
 
 describe('Human', () => {
 

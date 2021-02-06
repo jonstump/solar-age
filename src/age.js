@@ -5,10 +5,10 @@ export class Human {
     this.age = age;
     this.birthGender = birthGender;
     this.earthAvgLife = 0;
-    this.mercuryAge = 0;
-    this.venusAge = 0;
-    this.marsAge = 0;
-    this.jupiterAge = 0;
+    this.mercuryAge = Math.round(age/.24);
+    this.venusAge = Math.round(age/.62);
+    this.marsAge = Math.round(age/1.88);
+    this.jupiterAge = Math.round(age/11.86);
     this.mercuryExpectancy = 0;
     this.venusExpectancy = 0;
     this.marsExpectancy = 0;
