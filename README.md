@@ -17,7 +17,16 @@
 * This project is for showing TDD work on calculating a user's age using different planets in the solar system. It does not have a front end.
 
 ## Specs / Tests
-SPECS NEED TO BE UPDATED
+
+Human Constructor Specs:
+| Behavior | Input | Output |
+| ------------- |:-------------:| -----:|
+| a human's age is recorded | 25 | 25 |
+| a human's birth gender is recorded | "female" | "female" |
+| a human's age is calculated for Mercury | 25 | 104 |
+| a human's age is calculated for Venus | 25 | 40 |
+| a human's age is calculated for Mars | 25 | 13 |
+| a human's age is calculated for Jupiter | 25 | 2 |
 
 
 ## Setup/installation Requirements
@@ -45,6 +54,7 @@ $ git clone https://github.com/jonstump/solar-age
 * [w3schools](https://www.w3schools.com/)
 * [MDN Web Docs](https://developer.mozilla.org/en-US/)
 * [Planet age calc](https://theplanets.org/age-on-planets/)
+* [Avg life expectancy](https://www.simplyinsurance.com/average-us-life-expectancy-statistics/#section-3)
 
 ## License
 [GPLv3](https://choosealicense.com/licenses/gpl-3.0/)\
