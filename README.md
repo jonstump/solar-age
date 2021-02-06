@@ -17,7 +17,7 @@
 * This project is for showing TDD work on calculating a user's age using different planets in the solar system. It does not have a front end.
 
 ## Specs / Tests
-
+SPECS NEED TO BE UPDATED
 
 
 ## Setup/installation Requirements
@@ -29,20 +29,14 @@
 ```bash
 $ git clone https://github.com/jonstump/solar-age
 ```
-* After the page has been cloned to your chosen directory locate the folder and open it.
-* After you have the folder open that you cloned from Github.com double click the file "index.html"
-* The webpage should open in the default browser set by your machines settings
+* Once the project is cloned naviate to the directory and run ```npm install``` to install all relevant modules.
+* Now you should be able to open the project in your text editor and look at its functionality.
 
-This game can be played via it's [gh-page](https://jonstump.github.io/)
 
 ## Bugs
-* None
+* No front end (this project was not required to have one.)
 
 ## Further Exploration 
-(can be seen exploration branch)
-* Allow users to order more than one pizza
-* Display a list of pizzas
-* Capture user address
 
 ## Sources
 * [Epicodus](https://www.epicodus.com/)
@@ -50,6 +44,7 @@ This game can be played via it's [gh-page](https://jonstump.github.io/)
 * [stack overflow](https://stackoverflow.com/)
 * [w3schools](https://www.w3schools.com/)
 * [MDN Web Docs](https://developer.mozilla.org/en-US/)
+* [Planet age calc](https://theplanets.org/age-on-planets/)
 
 ## License
 [GPLv3](https://choosealicense.com/licenses/gpl-3.0/)\
