@@ -26,7 +26,7 @@ describe('Human', () => {
 })
 
 describe('Life Expectancy on Earth', () => {
-  test('should correctly output female life expectancy on Earth for age under 65', () => {
+  test('should correctly output female life expectancy on Earth, Mercury, Venus, Mars, & Jupiter for age under 65', () => {
     const human = new Human (25, "female");
     human.earthExpectancy();
     expect(human.earthAvgLife).toEqual(82);

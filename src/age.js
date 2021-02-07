@@ -1,6 +1,6 @@
 //Note to instructor: I started my project in a different order at the beginning of the day and realized I needed to pivot back to some simpler code. This might look a little wonky in my git commit history as it made me realize I needed to update my constructor in order to significantly dry up my code. Just wanted to leave this note here in case there was some confusing looking through my git history.
 
-//a quick note on gender. Since I am unable to find life expectancy calculators that do not include genders past male and female I decided to make my gender "birth gender" for the sake of purposes to attempt to be more inclusive. If I could do a calculation that allowed for more options I would do so.
+//a quick note on gender. Since I am unable to find life expectancy calculators that include genders past male and female I decided to make my gender "birth gender" for the sake of purposes to attempt to be more inclusive. If I could do a calculation that allowed for more options I would do so.
 
 export class Human {
   constructor (age, birthGender) {
