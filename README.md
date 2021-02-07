@@ -4,8 +4,6 @@
 <img align="center" src="https://avatars2.githubusercontent.com/u/59323850?s=460&u=372c7d529b7379408ae54491ab3449b6e2f4d94d&v=4">
 
 ## Technologies Used
-* HTML
-* CSS
 * Javascript
 * jQuery
 * Bootstrap
@@ -16,7 +14,6 @@
 ## Description
 * _Solar Age_  
 * This project is for showing TDD work on calculating a user's age using different planets in the solar system. It does not have a front end.
-
 *Note on Gender: Since I am unable to find life expectancy calculators that include genders past male and female I decided to make my gender "birth gender" for the sake of purposes to attempt to be more inclusive. If I could do a calculation that allowed for more options I would do so.
 
 ## Specs / Tests
