@@ -64,3 +64,13 @@ export class Human {
     // return earthAgeAlert;
   }
 }
+
+export class UserStrings {
+  constructor() {
+    this.earth = "";
+    this.mercury = "";
+    this.venus = "";
+    this.mars = "";
+    this.jupiter = "";
+  }
+}
