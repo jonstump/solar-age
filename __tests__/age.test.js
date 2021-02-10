@@ -1,5 +1,3 @@
-// import { describe } from 'yargs'; I don't know but this line here keeps adding itself randomly while I worked on my project.
-
 import { Human } from '../src/age.js';
 
 describe('Human', () => {
@@ -49,6 +47,7 @@ describe('Life Expectancy on Earth', () => {
 
 describe('Interstellar Age Calculator', () => {
   let human;
+  let marsAgeText;
   beforeEach(() => {
     human = new Human (25, "female");
     human.earthExpectancy();
@@ -114,16 +113,10 @@ describe('Interstellar life past expectancy', () => {
     human.lifeLeft();
   })
   test('should check if person has lived past life expectancy', () => {
-    // const human = new Human(100, "female");
-    // human.earthExpectancy();
-    expect(human.lifeLeft()).toEqual(true);
+    expect(human.lifeLeft()).toBeTruthy;
   })
   test ('should calculate how much someone has lived past their life expectancy on Earth', () => {
     expect(human.earthLifeLeft).toEqual(14);
-    // expect(human.mercuryLifeLeft).toEqual(59);
-    // expect(human.venusLifeLeft).toEqual(22);
-    // expect(human.marsLifeLeft).toEqual(7);
-    // expect(human.jupiterLifeLeft).toEqual(1);
   })
   test ('should calculate how much someone has lived past their life expectancy on Mercury', () => {
     expect(human.mercuryLifeLeft).toEqual(59);
@@ -137,4 +130,17 @@ describe('Interstellar life past expectancy', () => {
   test ('should calculate how much someone has lived past their life expectancy on Jupiter', () => {
     expect(human.jupiterLifeLeft).toEqual(1);
   })
+})
+
+describe('Age Alert', () => {
+  let human;
+  // let earthAgeAlert;
+  beforeEach(() => {
+    human = new Human(25, "female");
+    human.earthExpectancy();
+    human.insterstellarAge();
+    human.lifeLeft();
+    human.userAlert()
+  })
+  expect(human.userAlert()).stringContaining(`You are 25 years old and have 82 years left to live`)
 })
