@@ -106,16 +106,17 @@ describe('Interstellar Life Left', () => {
 })
 
 describe('Interstellar life past expectancy', () => {
-  test('should check if person has lived past life expectancy', () => {
-    const human = new Human(100, "female");
-    human.earthExpectancy();
-    expect(human.lifeLeft()).toEqual(true);
-  })
+  let human;
   beforeEach(() => {
     human = new Human(100, "female");
     human.earthExpectancy();
     human.insterstellarAge();
     human.lifeLeft();
+  })
+  test('should check if person has lived past life expectancy', () => {
+    // const human = new Human(100, "female");
+    // human.earthExpectancy();
+    expect(human.lifeLeft()).toEqual(true);
   })
   test ('should calculate how much someone has lived past their life expectancy on Earth', () => {
     expect(human.earthLifeLeft).toEqual(14);
