@@ -66,6 +66,8 @@ Interstellar Life Left Specs
 $ git clone https://github.com/jonstump/solar-age
 ```
 * Once the project is cloned navigate to the cloned directory and run ```npm install``` to install all relevant modules.
+* After running ```npm install``` you will want to run ```npm run build``` to build the project.
+* Once the project has been built you can run tests against it with ```npm test```
 * Now you should be able to open the project in your text editor and look at its functionality.
 
 
