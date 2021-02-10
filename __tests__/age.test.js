@@ -3,7 +3,6 @@
 import { Human } from '../src/age.js';
 
 describe('Human', () => {
-
   test('should correctly create an object with user age and birth gender', () => {
     const human = new Human (25, "female");
     expect(human.age).toEqual(25);
@@ -26,7 +25,7 @@ describe('Human', () => {
 })
 
 describe('Life Expectancy on Earth', () => {
-  test('should correctly output female life expectancy on Earth, Mercury, Venus, Mars, & Jupiter for age under 65', () => {
+  test('should correctly output female life expectancy on Earth for age under 65', () => {
     const human = new Human (25, "female");
     human.earthExpectancy();
     expect(human.earthAvgLife).toEqual(82);
@@ -49,23 +48,36 @@ describe('Life Expectancy on Earth', () => {
 })
 
 describe('Interstellar Age Calculator', () => {
-  test('should calculate age for Mercury, Venus, Mars, and Jupiter', () => {
-    const human = new Human (25, "female");
-    human.insterstellarAge();
-    expect(human.mercuryAge).toEqual(104);
-    expect(human.venusAge).toEqual(40);
-    expect(human.marsAge).toEqual(13);
-    expect(human.jupiterAge).toEqual(2);
-  })
-  test('should calculate life expectancies for Mercury, Venus, Mars, and Jupiter based on Earth expectancy', () => {
-    const human = new Human (25, "female");
+  let human;
+  beforeEach(() => {
+    human = new Human (25, "female");
     human.earthExpectancy();
     human.insterstellarAge();
-    expect(human.mercuryExpectancy).toEqual(342);
-    expect(human.venusExpectancy).toEqual(132);
-    expect(human.marsExpectancy).toEqual(44);
-    expect(human.jupiterExpectancy).toEqual(7);
+  });
+  test('should calculate age for Mercury', () => {
+    expect(human.mercuryAge).toEqual(104);
   })
+  test('should calculate age for Venus', () => {
+    expect(human.venusAge).toEqual(40);
+  });
+  test('should calculate age for Mars', () => {
+    expect(human.marsAge).toEqual(13);
+  });
+  test('should calculate age for Jupiter', () => {
+    expect(human.jupiterAge).toEqual(2);
+  });
+  test('should calculate life expectancy for Mercury', () => {
+    expect(human.mercuryExpectancy).toEqual(342);
+  });
+  test('should calculate life expectancy for Venus', () => {
+    expect(human.venusExpectancy).toEqual(132);
+  });
+  test('should calculate life expectancy for Mars', () => {
+    expect(human.marsExpectancy).toEqual(44);
+  });
+  test('should calculate life expectancy for Jupiter', () => {
+    expect(human.jupiterExpectancy).toEqual(7);
+  });
 })
 
 describe('Interstellar Life Left', () => {
