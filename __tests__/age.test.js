@@ -47,7 +47,6 @@ describe('Life Expectancy on Earth', () => {
 
 describe('Interstellar Age Calculator', () => {
   let human;
-  let marsAgeText;
   beforeEach(() => {
     human = new Human (25, "female");
     human.earthExpectancy();
@@ -134,7 +133,6 @@ describe('Interstellar life past expectancy', () => {
 
 describe('Age Alert', () => {
   let human;
-  // let earthAgeAlert;
   beforeEach(() => {
     human = new Human(25, "female");
     human.earthExpectancy();
