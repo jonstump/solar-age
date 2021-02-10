@@ -7,10 +7,10 @@ export class Human {
     this.age = age;
     this.birthGender = birthGender;
     this.earthAvgLife = 0;
-    this.mercuryAge = Math.round(age/.24);
-    this.venusAge = Math.round(age/.62);
-    this.marsAge = Math.round(age/1.88);
-    this.jupiterAge = Math.round(age/11.86);
+    this.mercuryAge = 0;
+    this.venusAge = 0;
+    this.marsAge = 0;
+    this.jupiterAge = 0;
     this.mercuryExpectancy = 0;
     this.venusExpectancy = 0;
     this.marsExpectancy = 0;
@@ -24,18 +24,26 @@ export class Human {
   earthExpectancy() {
     if (this.birthGender === "female" && this.age < 65) {
       this.earthAvgLife = 82;
-    } else if (this.birthGender === "female" && this.age > 65) {
+    } else if (this.birthGender === "female" && this.age >= 65) {
       this.earthAvgLife = 21;
-    } else if (this.birthGender === "male" && this.age > 65) {
+    } else if (this.birthGender === "male" && this.age >= 65) {
       this.earthAvgLife = 18;
     } else {
       this.earthAvgLife = 76;
     }
+  }
+
+  insterstellarAge() {
+    this.mercuryAge = Math.round(this.age/.24);
+    this.venusAge = Math.round(this.age/.62);
+    this.marsAge = Math.round(this.age/1.88);
+    this.jupiterAge = Math.round(this.age/11.86);
     this.mercuryExpectancy = Math.round(this.earthAvgLife/.24);
     this.venusExpectancy = Math.round(this.earthAvgLife/.62);
     this.marsExpectancy = Math.round(this.earthAvgLife/1.88);
     this.jupiterExpectancy = Math.round(this.earthAvgLife/11.86);
   }
+
   lifeLeft() {
     const negLifeCheck = (this.earthAvgLife+65)-this.age;
     const newExp = (this.earthAvgLife+65);
