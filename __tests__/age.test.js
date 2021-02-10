@@ -81,31 +81,59 @@ describe('Interstellar Age Calculator', () => {
 })
 
 describe('Interstellar Life Left', () => {
-  test('should calculate how much life a person has left per planet', () => {
-    const human = new Human(25, "female");
+  let human;
+  beforeEach(() => {
+    human = new Human(25, "female");
     human.earthExpectancy();
     human.insterstellarAge();
     human.lifeLeft();
+  })
+  test('should calculate how much life a person has left on Earth', () => {
     expect(human.earthLifeLeft).toEqual(57);
+  })
+  test('should calculate how much life a person has left on Mercury', () => {
     expect(human.mercuryLifeLeft).toEqual(238);
+  })
+  test('should calculate how much life a person has left on Venus', () => {
     expect(human.venusLifeLeft).toEqual(92);
+  })
+  test('should calculate how much life a person has left on Venus', () => {
     expect(human.marsLifeLeft).toEqual(31);
+  })
+  test('should calculate how much life a person has left on Venus', () => {
     expect(human.jupiterLifeLeft).toEqual(5);
   })
+})
+
+describe('Interstellar life past expectancy', () => {
   test('should check if person has lived past life expectancy', () => {
     const human = new Human(100, "female");
     human.earthExpectancy();
     expect(human.lifeLeft()).toEqual(true);
   })
-  test ('should calculate how much someone has lived past their life expectancy', () => {
-    const human = new Human(100, "female");
+  beforeEach(() => {
+    human = new Human(100, "female");
     human.earthExpectancy();
     human.insterstellarAge();
     human.lifeLeft();
+  })
+  test ('should calculate how much someone has lived past their life expectancy on Earth', () => {
     expect(human.earthLifeLeft).toEqual(14);
+    // expect(human.mercuryLifeLeft).toEqual(59);
+    // expect(human.venusLifeLeft).toEqual(22);
+    // expect(human.marsLifeLeft).toEqual(7);
+    // expect(human.jupiterLifeLeft).toEqual(1);
+  })
+  test ('should calculate how much someone has lived past their life expectancy on Mercury', () => {
     expect(human.mercuryLifeLeft).toEqual(59);
+  })
+  test ('should calculate how much someone has lived past their life expectancy on Venus', () => {
     expect(human.venusLifeLeft).toEqual(22);
+  })
+  test ('should calculate how much someone has lived past their life expectancy on Mars', () => {
     expect(human.marsLifeLeft).toEqual(7);
+  })
+  test ('should calculate how much someone has lived past their life expectancy on Jupiter', () => {
     expect(human.jupiterLifeLeft).toEqual(1);
   })
 })
