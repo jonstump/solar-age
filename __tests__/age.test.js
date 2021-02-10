@@ -1,4 +1,4 @@
-import { Human } from '../src/age.js';
+import { Human, UserStrings } from '../src/age.js';
 
 describe('Human', () => {
   test('should correctly create an object with user age and birth gender', () => {
@@ -19,6 +19,17 @@ describe('Human', () => {
     expect(human.venusLifeLeft).toEqual(0);
     expect(human.marsLifeLeft).toEqual(0);
     expect(human.jupiterLifeLeft).toEqual(0);
+  })
+})
+
+describe('UserStrings', () => {
+  test('should correctly create an object of empty strings to show to users', () => {
+    let userstrings = new UserStrings();
+    expect(userstrings.earth).toBe("")
+    expect(userstrings.mercury).toBe("")
+    expect(userstrings.venus).toBe("")
+    expect(userstrings.mars).toBe("")
+    expect(userstrings.jupiter).toBe("")
   })
 })
 
