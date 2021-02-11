@@ -149,6 +149,9 @@ describe('Age Alert', () => {
     human.insterstellarAge();
     human.lifeLeft();
   })
-  let userstrings = new UserStrings();
-  expect(userstrings.earth).toBe("You are 25 years old and have 82 years left to live");
+  test ('Should attach the user age and life expectancy for earth as a string', () => {
+    let userstrings = new UserStrings();
+    expect(userstrings.earth).toBe("You are 25 years old and have 82 years left to live");
+  })
+  
 })
