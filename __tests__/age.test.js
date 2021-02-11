@@ -153,8 +153,10 @@ describe('Age Alert', () => {
     userstrings = new UserStrings();
     userstrings.userAlert(human);
   })
-  test ('Should attach the user age and life expectancy for earth as a string', () => {
+  test ('Should attach the user age and life expectancy for Earth as a string', () => {
     expect(userstrings.earth).toBe("You are 25 years old and have 82 years left to live");
   })
-  
+  test ('Should attach the user age and life expectancy for Mercury as a string', () => {
+    expect(userstrings.mercury).toBe("You are 104 years old and have 238 years left to live");
+  })
 })
