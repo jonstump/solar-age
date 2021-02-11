@@ -143,13 +143,12 @@ describe('Interstellar life past expectancy', () => {
 })
 
 describe('Age Alert', () => {
-  let human;
   beforeEach(() => {
-    human = new Human(25, "female");
+    let human = new Human(25, "female");
     human.earthExpectancy();
     human.insterstellarAge();
     human.lifeLeft();
-    human.userAlert()
   })
-  expect(human.userAlert()).stringContaining(`You are 25 years old and have 82 years left to live`)
+  let userstrings = new UserStrings();
+  expect(userstrings.earth).toBe("You are 25 years old and have 82 years left to live");
 })

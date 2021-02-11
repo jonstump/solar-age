@@ -59,10 +59,6 @@ export class Human {
       this.jupiterLifeLeft = Math.round(this.jupiterExpectancy-this.jupiterAge);
     }
   }
-  userAlert() {
-    // let earthAgeAlert = `You are ${this.age} years old and have ${this.earthAvgLife} years left to live`
-    // return earthAgeAlert;
-  }
 }
 
 export class UserStrings {
@@ -72,5 +68,8 @@ export class UserStrings {
     this.venus = "";
     this.mars = "";
     this.jupiter = "";
+  }
+  userAlert() {
+    
   }
 }
