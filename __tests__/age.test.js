@@ -154,9 +154,12 @@ describe('Age Alert', () => {
     userstrings.userAlert(human);
   })
   test ('Should attach the user age and life expectancy for Earth as a string', () => {
-    expect(userstrings.earth).toBe("You are 25 years old and have 82 years left to live");
+    expect(userstrings.earth).toBe("You are 25 years old and have a life expectancy of 82 years");
   })
   test ('Should attach the user age and life expectancy for Mercury as a string', () => {
-    expect(userstrings.mercury).toBe("You are 104 years old and have 342 years left to live");
+    expect(userstrings.mercury).toBe("You are 104 years old and have a life expectancy of 342 years");
+  })
+  test ('Should attach the user age and life expectancy for Mercury as a string', () => {
+    expect(userstrings.venus).toBe("You are 40 years old and have a life expectancy of 132 years");
   })
 })
