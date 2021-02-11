@@ -159,7 +159,10 @@ describe('Age Alert', () => {
   test ('Should attach the user age and life expectancy for Mercury as a string', () => {
     expect(userstrings.mercury).toBe("You are 104 years old and have a life expectancy of 342 years");
   })
-  test ('Should attach the user age and life expectancy for Mercury as a string', () => {
+  test ('Should attach the user age and life expectancy for Venus as a string', () => {
     expect(userstrings.venus).toBe("You are 40 years old and have a life expectancy of 132 years");
+  })
+  test ('Should attach the user age and life expectancy for Mars as a string', () => {
+    expect(userstrings.mars).toBe("You are 13 years old and have a life expectancy of 44 years");
   })
 })
