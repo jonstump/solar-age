@@ -69,7 +69,7 @@ export class UserStrings {
     this.mars = "";
     this.jupiter = "";
   }
-  userAlert() {
-    
+  userAlert(human) {
+    this.earth = `You are ${human.age} years old and have ${human.earthAvgLife} years left to live`;
   }
 }
