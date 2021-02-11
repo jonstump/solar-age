@@ -1,6 +1,6 @@
 //a quick note on gender. Since I am unable to find life expectancy calculators that include genders past male and female I decided to make my gender "birth gender" for the sake of purposes to attempt to be more inclusive. If I could do a calculation that allowed for more options I would do so.
 
-export class Human {
+export default class Human {
   constructor (age, birthGender) {
     this.age = age;
     this.birthGender = birthGender;
@@ -61,19 +61,3 @@ export class Human {
   }
 }
 
-export class UserStrings {
-  constructor() {
-    this.earth = "";
-    this.mercury = "";
-    this.venus = "";
-    this.mars = "";
-    this.jupiter = "";
-  }
-  userAlert(human) {
-    this.earth = `You are ${human.age} years old and have a life expectancy of ${human.earthAvgLife} years`;
-    this.mercury = `You are ${human.mercuryAge} years old and have a life expectancy of ${human.mercuryExpectancy} years`;
-    this.venus = `You are ${human.venusAge} years old and have a life expectancy of ${human.venusExpectancy} years`;
-    this.mars = `You are ${human.marsAge} years old and have a life expectancy of ${human.marsExpectancy} years`;
-    this.jupiter = `You are ${human.jupiterAge} years old and have a life expectancy of ${human.jupiterExpectancy} years`;
-  }
-}
